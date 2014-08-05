@@ -21,7 +21,7 @@
     "url": "https://github.com/JoyP/commerce/issues"
   },
   "homepage": "https://github.com/JoyP/commerce",
-  "config":
+  "config": {
     "blanket": {
       "pattern": "/app/"
     }
