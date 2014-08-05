@@ -58,7 +58,7 @@ Item.deleteById = function(id, cb){
 };
 module.exports = Item;
 
-// PRIVATE FUNCTIONS ///
+// PRIVATE FUNCTIONS //
 
 function changePrototype(obj){
   var thing = _.create(Item.prototype, obj);

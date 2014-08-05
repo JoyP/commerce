@@ -1,25 +1,30 @@
-doctype html
-html
-  head
-    meta(charset='utf-8')
-    title Index
-    link(rel='stylesheet', href='/css/style.css')
-  body
-    h1 Index
-    nav
-      ul
-        li: a(href='/') Home
-        li: a(href='/about') About
-        li: a(href='/faq') FAQ
-    each item in items
-    ul
-    li= items.name
-    li= items.dimensions.l
-    li= items.dimensions.w
-    li= items.dimensions.h
-    li= items.weight
-    li= items.color
-    li= items.quantity
-    li= items.msrp
-    li= items.percentOff
-    li= items.cost
+extends ../shared/template
+
+block content
+
+  h2 Items
+
+  table
+    thead
+      tr
+        th Name
+        th Dimensions
+        th Weight
+        th Quantity
+        th MSRP
+        th Sale %
+        th Cost
+    tbody
+      each item in items
+        tr(style='background-color:#{item.color}')
+          td: a(href='/items/#{item._id}')= item.name
+          td
+            span l #{item.dimensions.l}in/
+            span w #{item.dimensions.w}in/
+            span h #{item.dimensions.h}in
+          td #{item.weight}oz
+          td= item.quantity
+          td $#{item.msrp.toFixed(2)}
+          td #{item.percentOff}%
+          td $#{item.cost().toFixed(2)}
+

@@ -14,7 +14,9 @@
     "url": "https://github.com/JoyP/commerce"
   },
   "author": "Joy Pratt joympratt@gmail.com",
-  "contributors":["Shruti Sharma <shrutijalewar@gmail.com>"],
+  "contributors": [
+    "Shruti Sharma <shrutijalewar@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/JoyP/commerce/issues"
@@ -24,6 +26,7 @@
     "body-parser": "^1.5.2",
     "chalk": "^0.5.1",
     "express": "^4.7.2",
+    "express-method-override": "0.0.3",
     "jade": "^1.5.0",
     "lodash": "^2.4.1",
     "mongodb": "^1.4.8",
